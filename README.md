@@ -1,6 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) that can create custom markers on a map by selecting an excel file containing the following information:
+
+- Address
+- Label
+- Colour(in hex)
+
+Sample:
+![Sample Image](image.png)
+[Sample Excel File](small-one.xlsx)
 
 ## Getting Started
+
+Create an .env.local with the following info:
+
+```
+GOOGLE_MAPS_API_KEY="your google api key"
+NEXT_PUBLIC_MAP_ID="your google map id"
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="your google api key"
+```
 
 First, run the development server:
 

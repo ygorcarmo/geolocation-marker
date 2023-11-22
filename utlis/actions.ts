@@ -4,7 +4,7 @@ import { read, utils } from "xlsx";
 import { Client } from "@googlemaps/google-maps-services-js";
 
 const convertAddressToLatLong = async (
-  addresses: [{ address: string; department: string; colour: string }]
+  addresses: [{ address: string; label: string; colour: string }]
 ) => {
   const apiKey = process.env.GOOGLE_MAPS_API_KEY;
   const latLngAndDep = [];
@@ -20,7 +20,7 @@ const convertAddressToLatLong = async (
 
     latLngAndDep.push({
       latAndLng: lagAndLng.data.results[0].geometry.location,
-      label: addresses[i].department,
+      label: addresses[i].label,
       colour: addresses[i].colour,
     });
   }

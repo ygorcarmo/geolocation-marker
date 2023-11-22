@@ -8,7 +8,8 @@ const SubmitButton = () => {
       {pending ? (
         <button
           type="submit"
-          className="flex w-auto gap-2 self-center rounded-md bg-blue-500 p-4 text-white hover:bg-sac-blue-opac aria-disabled:bg-black"
+          aria-disabled={pending}
+          className="flex w-auto gap-2 self-center rounded-md bg-blue-500 p-4 text-white hover:bg-sac-blue-opac aria-disabled:bg-black/30"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
