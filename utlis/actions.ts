@@ -44,7 +44,7 @@ export async function convertAddress(prevState: any, formData: FormData) {
     const file = formData.get("file") as File;
     const addressAndDep = await convertExcelToJSON(file);
     const coordinatesAndDep = await convertAddressToLatLong(addressAndDep);
-    return { messsage: "success", data: coordinatesAndDep };
+    return { message: "success", data: coordinatesAndDep };
   } catch (e) {
     console.log(e);
     return { message: "error" };
